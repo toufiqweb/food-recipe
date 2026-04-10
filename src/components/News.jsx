@@ -28,13 +28,14 @@ const News = () => {
 
           {/* Newsletter Form */}
           <div className="max-w-md mx-auto">
-            <div className="join w-full shadow-2xl">
+            <div className="join w-full max-w-xl shadow-lf rounded-full overflow-hidden p-5">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="input input-bordered join-item w-full bg-base-100 focus:outline-none focus:border-[#a855f7] text-base py-7 px-6 rounded-l-2xl"
+                className="input join-item w-full h-14 bg-base-100 focus:outline-none text-sm px-4 rounded-none"
               />
-              <button className="btn join-item bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#22d3ee] border-0 text-white hover:brightness-110 px-10 text-lg font-semibold rounded-r-2xl transition-all">
+
+              <button className="join-item h-14 px-6 bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#22d3ee] border-0 text-white font-semibold text-sm hover:brightness-110 transition-all">
                 Subscribe
               </button>
             </div>
