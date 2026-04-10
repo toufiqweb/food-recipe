@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Food = ({ food }) => {
   console.log(food, " food is here form food");
-  const { image_link, dish_name, cuisine, category, rating } = food;
+  const { id, image_link, dish_name, cuisine, category, rating } = food;
 
   return (
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 group overflow-hidden border border-base-200">
@@ -37,17 +38,17 @@ const Food = ({ food }) => {
         <h2 className="card-title text-xl font-bold line-clamp-2 group-hover:text-[#a855f7] transition-colors">
           {dish_name}
         </h2>
-        <div className="  text-black font-medium ">
-          {cuisine}
-        </div>
+        <div className="  text-black font-medium ">{cuisine}</div>
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-center gap-2 text-sm text-gray-500">
             <span>30 min</span> {/* You can make this dynamic later */}
           </div>
 
-          <button className="btn btn-sm btn-ghost text-[#ec4899] hover:bg-[#ec4899]/10">
-            View Recipe →
-          </button>
+          <Link href={`/allFoods/${id}`}>
+            <button className="btn btn-sm btn-ghost text-[#ec4899] hover:bg-[#ec4899]/10">
+              View Recipe →
+            </button>
+          </Link>
         </div>
       </div>
     </div>

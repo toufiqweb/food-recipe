@@ -1,5 +1,6 @@
 import React from "react";
 import Food from "./Food";
+import Link from "next/link";
 
 const Foods = async () => {
   const res = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/foods");
@@ -21,9 +22,11 @@ const Foods = async () => {
         ))}
       </div>
 
-      <button className="btn btn-lg my-10 flex justify-self-center bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#22d3ee] border-0 text-white hover:scale-105 transition-transform shadow-xl shadow-purple-500/30 font-semibold px-10">
-        Show more
-      </button>
+      <Link href={"/allFoods"}>
+        <button className="btn btn-lg my-10 flex justify-self-center bg-gradient-to-r from-[#a855f7] via-[#ec4899] to-[#22d3ee] border-0 text-white hover:scale-105 transition-transform shadow-xl shadow-purple-500/30 font-semibold px-10">
+          Show more <span className="pl-1"> →</span>
+        </button>
+      </Link>
     </div>
   );
 };
