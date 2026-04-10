@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-full bg-base-100">
         
         <NavBar/>
-        <main className="container mx-auto">
+        <main className="container mx-auto px-5">
         {children}
 
         </main>
